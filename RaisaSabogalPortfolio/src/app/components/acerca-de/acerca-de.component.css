@@ -1,0 +1,26 @@
+.row{
+    padding: 20px;
+}
+div{
+    background-color: black;
+    color:rgb(255, 255, 255)
+}
+/*Estilo de la foto de perfil*/
+@media (min-width: 576px){
+    #Foto{
+        position: absolute;
+        width: 15%;
+        left: 9%;
+        top: 700px;
+        right: 20%;
+    }
+}
+@media (max-width: 575px){
+    #Foto{
+        position: absolute;
+        width: 30%;
+        left: 31%;
+        top: 500px;
+        right: 20%;
+    }
+}
