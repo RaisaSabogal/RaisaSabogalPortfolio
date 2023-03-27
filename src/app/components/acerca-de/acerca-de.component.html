@@ -1,18 +1,20 @@
 <div class="row">
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <img src="../../../assets/Foto.png" 
-    class="img-fluid" id="Foto">
-</div>
-<div class="row justify-content-end">
-    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-    <span> 
-        <h1>Acerca de mí</h1>
-        <p>Soy una estudiante avanzada de Diseño Industrial 👩🏻‍🎓 en la Universidad de Lanús, apasionada del diseño y desarrollo de productos en donde tengo orientada gran parte de mi experiencia laboral con clientes nacionales e internacionales, he trabajado con desarrollo de productos como diseñador industrial, archivos de corte para máquinas de corte láser, modelado en 3D, instructivos de productos, como diseñador gráfico con distintas marcas, acompañándolos a crearlas, contenido digital, desde catálogos de productos, fotografía de producto, eBooks, mantenimiento de páginas web, diseño gráfico como desarrollo visual de sus marcas, logotipos, logos, Social Media y Diseño y Desarrollo de páginas web, hace casi dos años me he estado formando como Desarrolladora Fullstack en el curso de Argentina Programa 📝
-            Me gusta trabajar en equipos que inspiren a crecer, buscar nuevos desafíos y siempre seguir aprendiendo. 
-            Me considero una persona creativa, alegre, perseverante siempre en búsqueda de generar la mejor calidad y experiencia de usuario en el desarrollo de productos de distintos proyectos de diseño creativo.
-        </p>
-    </span>
-</div></div>
-
-</div>
-
+        <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged"> 
+            Editar Persona
+        </button>
+        
+        <img src="../../../assets/Foto.png" class="img-fluid" id="Foto">
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <p id="nombre"> {{ per.nombre }} {{ per.apellido }}</p>
+            <p>Fullstack Developer Jr</p>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <span>
+                <h1>Acerca de mí</h1>
+                <p>{{ per.descrip }}</p>
+            </span>
+        </div>
+    </div>
+    

@@ -1,18 +1,33 @@
-<div class="row">
-    <h1>Educación:</h1>
-    <div class="col-lg-11">
-        <ul>
-            <li><h1>Estudio 1</h1> 
-               <h3> (years) </h3></li>
-            <p>Diseño y creación de piezas gráficas, desarrollo y mantenimiento de páginas web y creación de contenido para redes Facebook, Instagram, branding de marcas, edición de videos, programación de contenido, Facebook Ads, Instagram Ads, Google Ads, para marcas nacionales e internacionales.
-            Aptitudes: Diseño de redes sociales · Anuncios de Facebook · Páginas de Facebook personalizadas · Administrador de anuncios de Facebook · Facebook · Marketing en Facebook · Programas de diseño Adobe · After Effects · Adobe InDesign · Ruby · JavaScript · HTML5 · Microsoft SQL Server · Diseño de logotipos · Adobe Photoshop · Adobe Illustrator · Diseño gráfico · Adobe Premiere Pro</p>
-        </ul>
-        <ul>
-            <li><h1>Estudio 2</h1> 
-             <h3>(years) </h3></li>
-            <p>Diseño y creación de piezas gráficas, mantinimiento de páginas web y de contenido para redes Facebook, Instagram, branding de marcas, edición de videos, programación de contenido, Facebook Ads, Instagram Ads, Google Ads.Diseño y creación de piezas gráficas, páginas web y de programas de diseño Adobe · After Effects · Adobe InDesign · Ruby · JavaScript · HTML5 · Microsoft SQL Server · Diseño de logotipos · Adobe Photoshop · Adobe Illustrator · Diseño gráfico · Adobe Premiere Pro</p>
-        </ul>
-        
-    </div>
-</div>
-
+<div class="container-fluid">
+    <div class="row">
+        <h1>Educacion</h1>
+        <div class="col-lg-2">
+            <button type="button" class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">
+                Nueva Educacion
+            </button>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-lg-10">
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let Educacion of edu">
+                            <td>
+                                <h2> {{Educacion.nombreE}}</h2>
+                            </td>
+                            <td>
+                                {{Educacion.descripcionE}}
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-primary" routerLink="/editedu/{{Educacion.id}}">
+                                    <i class="bi bi-pen-fill"></i> Editar
+                                </button>
+                            </td>
+                            <td *ngIf="isLogged">
+                                <button class="btn btn-primary" (click)="delete(Educacion.id)">
+                                    <i class="bi bi-x-lg"></i> Borrar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>

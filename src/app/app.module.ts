@@ -16,6 +16,18 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { interceptorProvider } from './service/interceptor-service';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
+import { NewEducationComponent } from './components/education/new-education.component';
+import { EditEducationComponent } from './components/education/edit-education.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
+import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
+import { EditskillsComponent } from './components/hys/editskills.component';
+import { NewSkillsComponent } from './components/hys/new-skills.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +44,27 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    EditAcercaDeComponent,
+    NewEducationComponent,
+    EditEducationComponent,
+    EditExperienciaComponent,
+    NewExperienciaComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
+    EditskillsComponent,
+    NewSkillsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    FormsModule
+  
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

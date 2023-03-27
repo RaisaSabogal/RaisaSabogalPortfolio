@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://aprai-381823.rj.r.appspot.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 
